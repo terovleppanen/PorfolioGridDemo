@@ -37,6 +37,10 @@ body {
   display: none;
 }
 
+.navbar .hamburger:hover {
+  cursor: pointer;
+}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -57,6 +61,51 @@ body {
 }
 
 /* Navbar ends */
+
+/* Mobile navbar starts */
+/* Hidden by default */
+.mobileNav {
+  width: 80px;
+  height: 100vh;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  /* Hide the mobileNav until clicked open */
+  right: -160px;
+
+  z-index: 2;
+  padding: 16px;
+
+  transition: transform 0.3s;
+}
+
+.openDrawer {
+  transform: translateX(-160px);
+}
+
+.mobileNav img {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileNav a {
+  text-decoration: none;
+  color: black;
+
+  margin: 16px 0;
+}
+
+.mobileNav a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile navbar ends */
 
 /* Main project gallery grid starts */
 .project-grid {
@@ -227,17 +276,17 @@ body {
 
 /* classes for js */
 .animateBar1 {
-  animation: flipBarDown 1s;
+  animation: flipBarDown 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar2 {
-  animation: fadeBar 1s;
+  animation: fadeBar 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animateBar3 {
-  animation: flipBarUp 1s;
+  animation: flipBarUp 0.5s;
   animation-fill-mode: forwards;
 }
 
